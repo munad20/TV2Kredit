@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.grp15.krediteringssystem.presentation.LoginController">
+   <children>
+      <Pane layoutX="257.0" layoutY="130.0" prefHeight="340.0" prefWidth="286.0" style="-fx-background-color: #222222;">
+         <children>
+            <TextField fx:id="username" layoutX="44.0" layoutY="124.0" prefHeight="25.0" prefWidth="200.0" promptText="Username" style="-fx-background-color: #222222; -fx-text-fill: #FFFFFF; -fx-text-highlight-fill: #FFFFFF;" />
+            <PasswordField fx:id="password" layoutX="44.0" layoutY="158.0" prefHeight="25.0" prefWidth="200.0" promptText="Password" style="-fx-background-color: #222222; -fx-text-fill: #FFFFFF; -fx-text-highlight-fill: #FFFFFF;" />
+            <Button layoutX="39.0" layoutY="210.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #70f320;" text="Login" />
+            <Label layoutX="84.0" layoutY="14.0" text="Login" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="45.0" />
+               </font>
+            </Label>
+            <Separator layoutX="43.0" layoutY="149.0" prefWidth="200.0" />
+            <Separator layoutX="43.0" layoutY="182.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Label layoutX="122.0" layoutY="28.0" text="TV2 Krediteringssystem" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

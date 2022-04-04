@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.grp15.krediteringssystem.presentation.NewUserController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="358.0" prefWidth="175.0">
+                     <children>
+                        <Label text="Username:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="20.0" text="Password:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="114.0" layoutY="179.0" text="Confirm password:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="41.0" text="Permission:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="358.0" prefWidth="417.0">
+                     <children>
+                        <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0" />
+                        <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <PasswordField fx:id="confirmPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <ChoiceBox fx:id="permission" prefWidth="175.0">
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                     </children></VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+            <Button layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onAction="#save" text="Save" />
+        </buttons>
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+      </ButtonBar>
+   </children>
+</VBox>

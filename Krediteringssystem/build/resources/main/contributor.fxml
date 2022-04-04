@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.grp15.krediteringssystem.presentation.ContributorController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Fil">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Ny">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#onNewProduction" text="Produktion" />
+                                <MenuItem mnemonicParsing="false" onAction="#onNewContributor" text="Medvirkende" />
+                                <MenuItem mnemonicParsing="false" onAction="#onNewUser" text="Bruger" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="329.0" styleClass="vbox">
+                    <children>
+                        <HBox prefHeight="25.0" prefWidth="329.0">
+                            <children>
+                                <TextField fx:id="search" HBox.hgrow="ALWAYS" />
+                                <Button mnemonicParsing="false" text="🔍" />
+                            </children>
+                        </HBox>
+                        <Label text="Produktioner">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </Label>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                    <children>
+                                        <VBox prefWidth="314.0">
+                                            <children>
+                                                <VBox>
+                                                    <children>
+                                                        <Label minWidth="-Infinity" text="Titel">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label minHeight="24.0" text="Dette er en beskrivende tekst der omhandler en vilkårlig produktion, som indeholder nogle forskellige skuespillere" wrapText="true">
+                                                            <font>
+                                                                <Font size="13.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                    </children></AnchorPane>
+                            </content>
+                        </ScrollPane>
+                        <Label text="Medvirkende">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </Label>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="editor" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox prefHeight="26.0" prefWidth="1271.0">
+                            <children>
+                                <Label text="Navn:">
+                                    <font>
+                                        <Font name="Arial" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets right="78.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="title" prefHeight="25.0" prefWidth="175.0" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </HBox>
+                        <HBox prefHeight="180.0" prefWidth="1271.0">
+                            <children>
+                                <Label text="Beskrivelse:">
+                                    <font>
+                                        <Font name="Arial" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets right="33.0" />
+                                    </padding>
+                                </Label>
+                                <TextArea fx:id="resume" prefHeight="180.0" prefWidth="1134.0" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin></TextArea>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin>
+                        </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="1271.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#onSave" text="Save">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
